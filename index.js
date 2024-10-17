@@ -25,7 +25,6 @@ fs.mkdirSync(CONSTS.PACKAGES_DIR);
 
 fs.copyFileSync(CONSTS.LPM_TGZ_PATH, CONSTS.LPM_TGZ_DEST);
 
-spawnSync("cd ~/.lpm/lib/ && tar -xzvf lpm.tgz && rm lpm.tgz && npm install && cd ~");
 
 const nuevaLinea = `
 lpm()
@@ -34,6 +33,7 @@ lpm()
 }`;
 
 fs.appendFileSync(CONSTS.BASHRC_DIR, nuevaLinea, "utf-8");
-spawnSync("source ~/.bashrc");
+
+spawnSync("sh", ["-c", "cd ~/.lpm/lib/ && tar -xzvf lpm.tgz && rm lpm.tgz && npm install && cd ~ && source ~/.bashrc"], { stdio: "inherit" })
 
 console.log("lpm ha sido instalado");
