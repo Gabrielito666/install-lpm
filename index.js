@@ -15,14 +15,15 @@ const CONSTS =
     INDEX_DIR : $home('.lpm/lib/index.js'),
     PACKAGE_JSON_DIR : $home('.lpm/lib/package.json'),
     BASHRC_DIR : $home('.bashrc'),
-    LPM_TGZ_PATH : $dir('lpm.tgz')
+    LPM_TGZ_PATH : $dir('lpm.tgz'),
+    LPM_TGZ_DEST : $home('.lpm/lib/lpm.tgz'),
 }
 
 fs.mkdirSync(CONSTS.ROOT_DIR);
 fs.mkdirSync(CONSTS.LIB_DIR);
 fs.mkdirSync(CONSTS.PACKAGES_DIR);
 
-fs.copyFileSync(CONSTS.LPM_TGZ_PATH, CONSTS.LIB_DIR);
+fs.copyFileSync(CONSTS.LPM_TGZ_PATH, CONSTS.LPM_TGZ_DEST);
 
 spawnSync("cd ~/.lpm/lib/ && tar -xzvf lpm.tgz && rm lpm.tgz && npm install && cd ~");
 
