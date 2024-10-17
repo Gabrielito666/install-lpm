@@ -1,0 +1,18 @@
+{
+  "name": "lpm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start-server": "node lib/server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "express": "^4.21.1",
+    "sqlite-express": "^4.0.2",
+    "tar": "^7.4.3"
+  }
+}

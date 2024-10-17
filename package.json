@@ -1,0 +1,10 @@
+{
+  "name": "install-lpm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "Gabriel Farías R",
+  "license": "ISC",
+  "description": "Instalador de lpm"
+}
