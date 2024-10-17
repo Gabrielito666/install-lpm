@@ -22,7 +22,7 @@ fs.mkdirSync(CONSTS.ROOT_DIR);
 fs.mkdirSync(CONSTS.LIB_DIR);
 fs.mkdirSync(CONSTS.PACKAGES_DIR);
 
-fs.copyFileSync(CONSTS.LPM_TGZ_PATH, LIB_DIR);
+fs.copyFileSync(CONSTS.LPM_TGZ_PATH, CONSTS.LIB_DIR);
 
 spawnSync("cd ~/.lpm/lib/ && tar -xzvf lpm.tgz && rm lpm.tgz && npm install && cd ~");
 
